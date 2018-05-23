@@ -3,7 +3,7 @@ html {
   font-family: 'Open Sans Condensed', sans-serif;
 }
 body {
-  width: 360px;
+  width: 100%;
   font-size: 1.6rem;
   color: black;
   background-color: white;
@@ -28,7 +28,7 @@ body {
 }
 .button {
   color: white;
-  font-size: 1.8rem;
+  font-size: 2rem;
   background-color: #7f8c8d;
   margin: .2rem .4rem;
   border-radius: .5rem;
@@ -43,25 +43,38 @@ body {
   /* background-color: #7f8c8d; */
 }
 #colinPic {
-  width: 27rem;
-  padding: 2rem 4.5rem 1rem;
+  border-radius: .5rem;
+  width: 90%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 480px;
+  /* width: 27rem;
+  padding: 2rem 4.5rem 1rem; */
 }
 #about {
-  padding-right: 1rem;
-  padding-left: 2rem;
+  padding-right: 8%;
+  padding-left: 8%;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  width: 33rem;
+  /* width: 33rem; */
   /* background-color: #bdc3c7; */
   min-height: 6.0rem;
   font-size: 2.0rem;
   text-align: left;
+  /* max-width: 480px; */
 }
-#reel {
-  width: 100%;
-  /* background-color: #7f8c8d; */
-  text-align: center;
-  /* min-height: 6.0rem; */
+#reelWrapper {
+	position: relative;
+	padding-bottom: 35%; /* 16:9 */
+	padding-top: 25px;
+  height: 0;
+}
+#reelVid {
+	position: absolute;
+	top: 0;
+	left: 5%;
+	width: 90%;
+  height: 90%;  
 }
 #portfolio {
   width: 100%;
@@ -69,17 +82,98 @@ body {
   min-height: 6.0rem;
 }
 .header {
-  width: 80%;
-  border: solid .2rem #7f8c8d;
-  border-radius: .5rem;
-  margin: auto;
-}
-#reelVid {
-  width: 34rem;
-  padding: 1rem;
+  font-size: 2.4rem;
+  text-align: center;
 }
 #contact {
+  margin-top: 2.4rem;
   width: 100%;
   /* background-color: #7f8c8d; */
   min-height: 6.0rem;
 }
+.display {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border: solid .2rem #7f8c8d;
+  border-radius: .5rem;
+}
+a:link {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+a:active {
+  color: white;
+  text-decoration: none;
+}
+.icon {
+  font-size: 6rem;
+  /* color: #7f8c8d; */
+  margin-left: .2rem;
+  margin-right: .2rem;
+}
+#attribution {
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.4rem;
+  color: black;
+}
+#social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#call {
+  justify-self: end;
+}
+#youtube {
+  justify-self: end;
+}
+#gmail {
+  justify-self: start;
+}
+#imdb {
+  justify-self: start;
+}
+#attribution > a {
+  color: black;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 480px) {
+#photoWithAbout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#call {
+  justify-self: stretch;
+}
+#youtube {
+  justify-self: stretch;
+}
+#gmail {
+  justify-self: stretch;
+}
+#imdb {
+  justify-self: stretch;
+}
+#portfolioWrapper {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}  
+
+}  

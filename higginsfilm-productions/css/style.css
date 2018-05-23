@@ -1,0 +1,85 @@
+html {
+  font-size: 62.5%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body {
+  width: 360px;
+  font-size: 1.6rem;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+#title {
+  width: 100%;
+  font-size: 3.6rem;
+  text-align: left;
+}
+#subtitle {
+  width: 100%;
+  text-align: left;
+  font-size: 2.4rem;
+}
+#navButtons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: .6rem;
+  /* background-color: #bdc3c7; */
+}
+.button {
+  color: white;
+  font-size: 1.8rem;
+  background-color: #7f8c8d;
+  margin: .2rem .4rem;
+  border-radius: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.button:hover {
+  cursor: pointer;
+}
+#photo {
+  width: 100%;
+  /* background-color: #7f8c8d; */
+}
+#colinPic {
+  width: 27rem;
+  padding: 2rem 4.5rem 1rem;
+}
+#about {
+  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 33rem;
+  /* background-color: #bdc3c7; */
+  min-height: 6.0rem;
+  font-size: 2.0rem;
+  text-align: left;
+}
+#reel {
+  width: 100%;
+  /* background-color: #7f8c8d; */
+  text-align: center;
+  /* min-height: 6.0rem; */
+}
+#portfolio {
+  width: 100%;
+  /* background-color: #bdc3c7; */
+  min-height: 6.0rem;
+}
+.header {
+  width: 80%;
+  border: solid .2rem #7f8c8d;
+  border-radius: .5rem;
+  margin: auto;
+}
+#reelVid {
+  width: 34rem;
+  padding: 1rem;
+}
+#contact {
+  width: 100%;
+  /* background-color: #7f8c8d; */
+  min-height: 6.0rem;
+}

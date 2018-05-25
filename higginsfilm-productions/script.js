@@ -98,7 +98,7 @@ var pcMacSkills = [
     'RedGiant PluralEyes'];
 
 var allSections = ["xPcMacSkills", "xMiscellaneous", "xWriting", "xGrip", "xAssistantDirecting", "xActorVoiceTalent", "xProducing", "xDigitalImagingTechnician", "xLocationSound", "xDirecting", "xCamera", "xEditorial"]
-
+var openSection = "";
 
 function showSection(div, data) {
     
@@ -106,16 +106,21 @@ function showSection(div, data) {
         document.getElementById(allSections[i]).innerHTML = "";
     }
     
-    var displayData = "<div class='display'><ul>";
-    for (i = 0; i < data.length; i++) {
-        if (Array.isArray(data[i])){
-            displayData += "<li>" + data[i][0] + ": " + data[i][1] + "</li>";
-        } else {
-            displayData += "<li>" + data[i] + "</li>";
+    if (openSection != div) {
+        var displayData = "<div class='display'><ul>";
+        for (i = 0; i < data.length; i++) {
+            if (Array.isArray(data[i])){
+                displayData += "<li>" + data[i][0] + ": " + data[i][1] + "</li>";
+            } else {
+                displayData += "<li>" + data[i] + "</li>";
+            }
         }
+        displayData += "</ul></div>";
+        document.getElementById(div).innerHTML = displayData;
+        openSection = div;
+    } else {
+        openSection = "";
     }
-    displayData += "</ul></div>";
-    document.getElementById(div).innerHTML = displayData;
 }
 
 window.onload = function() {
